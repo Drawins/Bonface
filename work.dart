@@ -1,16 +1,14 @@
-import 'dart:io';
 
 void main(){
-  // print('Enter your name');
-  // var name = stdin.readLineSync();
-  // print('Enter your age:');
-  // int age = stdin.readByteSync();
-  // print('hello $name your are $age years old');
-   print('Enter your number:');
-  int num = stdin.readByteSync();
-  if (num%2==0) {
-    print('$num is an even number.');
-  } else{
-    print('$num is an odd number.');
-  }
+ List <int> a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+ List <int> b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+ for (var num in a) {
+  int numbers = num;
+     for (var item in b) {
+       int items=item;
+       if (numbers==items) {
+         print(numbers);
+       }
+     }
+   }
 }
