@@ -21,14 +21,14 @@
 //     print('Hello');
 //   }
 //   }
-import 'dart:io';
+// import 'dart:io';
 
-void main(){
-  print('Enter your number:');
-  var num = stdin.readByteSync();
-  int text = 0;
-  for (var i = 0; i < num; i++) {
-    text += i;
-  }
-  print(text);
-}
+// void main(){
+//   print('Enter your number:');
+//   var num = stdin.readByteSync();
+//   int text = 0;
+//   for (var i = 0; i < num; i++) {
+//     text += i;
+//   }
+//   print(text);
+//}
