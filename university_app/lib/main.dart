@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import'package:university_app/screens/home_screen.dart';
+import 'package:university_app/screens/registraion_screen.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -33,8 +34,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         
       ),
-      home: HomeScreen(
+      home: HomeScreen( 
       ),
+      // registration: RegistrationScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
