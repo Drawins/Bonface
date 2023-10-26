@@ -34,8 +34,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         
       ),
-      home: HomeScreen( 
-      ),
+      home: RegistrationScreen( 
+      ),darkTheme: ThemeData.light(),
       // registration: RegistrationScreen(),
       debugShowCheckedModeBanner: false,
     );

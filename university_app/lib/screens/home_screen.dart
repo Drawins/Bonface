@@ -14,9 +14,9 @@ class HomeScreen extends StatelessWidget{
        fontSize: 15,
        ),
        
-        toolbarHeight: 60,
+        toolbarHeight: 50,
        ),
-        backgroundColor: Color.fromARGB(255, 144, 204, 231),
+        backgroundColor:const Color.fromARGB(255, 175, 219, 240),
         
    body:const Padding(
     padding:  EdgeInsets.all(30.0),
@@ -34,9 +34,10 @@ class HomeScreen extends StatelessWidget{
         hintStyle:  TextStyle(fontFamily: AutofillHints.telephoneNumberLocalSuffix),
         contentPadding:  EdgeInsets.all(0), 
          border: OutlineInputBorder( 
-        // borderRadius: BorderRadius.circular(400.0),
+         
          borderSide:  BorderSide (width: 2)
          )
+         
       ),
       maxLength: 10,
       minLines:1,
@@ -54,6 +55,7 @@ class HomeScreen extends StatelessWidget{
      Icon(Icons.https),
      SizedBox( width: 250, height: 30,
     child:  TextField(decoration: InputDecoration(
+      labelText: 'password',
       hintText: 'Enter your password',
        hintStyle:  TextStyle(fontFamily: AutofillHints.telephoneNumberLocalSuffix),
         contentPadding:  EdgeInsets.all(5), 
@@ -91,7 +93,7 @@ Column(
     
     ],
   //  child: MaterialButton(onPressed: onPressed)
-  
+  //  mainAxisAlignment: MainAxisAlignment.center,
    ),
    ),
   );
