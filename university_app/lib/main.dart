@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
-import'package:university_app/screens/home_screen.dart';
-import 'package:university_app/screens/registraion_screen.dart';
+import 'package:university_app/screens/login_screen.dart';
+import 'package:university_app/screens/signup_screen.dart';
+import 'package:university_app/screens/splashpage_screen.dart';
+import 'package:university_app/screens/aboutus.dart';
+import 'package:university_app/screens/setting.dart';
+import 'package:university_app/screens/profile.dart';
+
+
 void main() {
   runApp(const MyApp());
 }
@@ -12,9 +18,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Sterling',
+      title: 'TEN_HEART',
       theme: ThemeData(
-    
         // This is the theme of your application.
         //
         // TRY THIS: Try running your application with "flutter run". You'll see
@@ -32,13 +37,10 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
-        
       ),
-      home: RegistrationScreen( 
-      ),darkTheme: ThemeData.light(),
+      home: Splash(), darkTheme: ThemeData.light(),
       // registration: RegistrationScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
 }
-
