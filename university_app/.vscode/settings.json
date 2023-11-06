@@ -1,5 +1,8 @@
 {
     "editor.fontSize": 13,
     "workbench.colorTheme": "Default Dark Modern",
-    "workbench.preferredHighContrastColorTheme": "Default Dark Modern"
+    "workbench.preferredHighContrastColorTheme": "Default High Contrast",
+    "workbench.preferredDarkColorTheme": "Default Dark Modern",
+    "workbench.preferredHighContrastLightColorTheme": "Default High Contrast",
+    "workbench.preferredLightColorTheme": "Default High Contrast"
 }

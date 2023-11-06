@@ -1,6 +1,13 @@
-import 'package:flutter/material.dart';
-import 'package:university_app/screens/homepage_screen.dart';
 
+import 'dart:math';
+import 'package:flutter/material.dart';
+import 'package:university_app/screens/aboutus.dart';
+import 'package:university_app/screens/login_screen.dart';
+import 'package:university_app/screens/track.dart';
+import 'package:university_app/screens/profile.dart';
+import 'package:university_app/screens/setting.dart';
+import 'package:university_app/screens/signup_screen.dart';
+import 'package:university_app/screens/transaction.dart';
 class aboutus extends StatefulWidget {
   const aboutus({super.key});
 
@@ -24,6 +31,62 @@ class _aboutusState extends State<aboutus> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       drawer: Drawer(
+        backgroundColor: Colors.white,
+        width: 200,
+        child: ListView(
+          children: [
+            ListTile(
+              tileColor: Colors.white,
+              title: const Text('Profile'),
+              onTap: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => const profile()));
+              },
+            ),
+            const ListTile(
+              title: Text('ContactUs'),
+              tileColor: Colors.white,
+            ),
+            const ListTile(
+              title: Text(
+                'Graph',
+              ),
+              tileColor: Colors.white,
+            ),
+            ListTile(
+              title: const Text('Settings'),
+              tileColor: Colors.white,
+              onTap: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => const Setting()));
+              },
+            ),
+          const  ListTile(
+              title: Text('Notification') ,
+            ),
+            const SizedBox(
+              height: 500,
+            ),
+            ListTile(
+              title: const Text(
+                'Log out',
+                style: TextStyle(color: Colors.red),
+              ),
+              onTap: () {
+                Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => LoginScreen()));
+                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                  content: Text(
+                    'Are you sure you want to log out',
+                    style: TextStyle(color: Colors.red),
+                  ),
+                ));
+              },
+            )
+          ],
+        ),
+      ),
       appBar: AppBar(
         title: const Text('About Us'),
         titleSpacing: 00.0,
@@ -31,17 +94,17 @@ class _aboutusState extends State<aboutus> {
         surfaceTintColor: Colors.white,
         backgroundColor: const Color.fromARGB(255, 15, 15, 15),
         titleTextStyle: const TextStyle(
-          color: Colors.white,
+          color: Color.fromARGB(238, 39, 221, 3),
           fontSize: 15,
         ),
         toolbarHeight: 50,
       ),
-      backgroundColor: const Color.fromARGB(242, 218, 168, 7),
+      backgroundColor: const Color.fromARGB(255, 7, 153, 56),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color.fromARGB(241, 0, 0, 0),
+        backgroundColor:const Color.fromARGB(241, 0, 0, 0),
         iconSize: 20,
         selectedLabelStyle: const TextStyle(color: Colors.white),
-        unselectedItemColor: const Color.fromARGB(242, 218, 168, 7),
+        unselectedItemColor:const Color.fromARGB(238, 39, 221, 3), 
         selectedIconTheme:
             const IconThemeData(color: Color.fromARGB(255, 255, 255, 255)),
         type: BottomNavigationBarType.fixed,
@@ -63,7 +126,7 @@ class _aboutusState extends State<aboutus> {
               backgroundColor: Colors.white)
         ],
         onTap: (index) {
-          int _currentIndex = 0;
+         
           setState(() {
             _currentIndex = _currentIndex;
           });

@@ -12,7 +12,7 @@ class _SplashScreenState extends State<Splash> {
     super.initState();
 
     Future.delayed(
-      const Duration(seconds: 3),
+      const Duration(seconds: 1),
       () {
         Navigator.pushReplacement(
           context,
@@ -26,23 +26,31 @@ class _SplashScreenState extends State<Splash> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        
         width: double.infinity,
         decoration: const BoxDecoration(
+          
+          // image: DecorationImage(
+          //   image: AssetImage("images/logo2.png"),
+          //   fit: BoxFit.cover,
+          // ),
+        
             // gradient: LinearGradient(
             //     colors: [   Color.fromARGB(242, 218, 168, 7),  Color.fromARGB(241, 15, 15, 15), ],
             //     begin: Alignment.topRight,
             //     end: Alignment.bottomLeft)
-            color: Colors.white),
-        child: Column(
+            color: Color.fromARGB(255, 7, 153, 56)),
+        child:  Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            
             Image.asset(
-              'images/coins.png',
-              height: 60,
-              width: 60,
+              'images/logo2.png',
+              height: 90,
+              width: 90,
             ),
-            const Text('COIN WHIZ..',
-                style: TextStyle(
+            const Text('CROPCOM..',
+                style: TextStyle(color: Colors.white,
                     fontStyle: FontStyle.normal,
                     fontWeight: FontWeight.bold,
                     fontSize: 30)),
