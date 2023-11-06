@@ -7,6 +7,7 @@ class SignupScreen extends StatefulWidget {
 }
 
 class _SignupScreenState extends State<SignupScreen> {
+  List users = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +24,9 @@ class _SignupScreenState extends State<SignupScreen> {
           toolbarHeight: 60,
         ),
         backgroundColor: const Color.fromARGB(255, 7, 153, 56),
-        body: Card( color: const Color.fromARGB(255, 7, 153, 56) , elevation: 0,
+        body: Card(
+            color: const Color.fromARGB(255, 7, 153, 56),
+            elevation: 0,
             child: SizedBox(
                 height: 500,
                 width: 350,
@@ -42,7 +45,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               height: 30,
                               child: TextField(
                                 decoration: InputDecoration(
-                                  hintText: 'Enter your full name:',
+                                  hintText: 'Enter your user name:',
                                   filled: true,
                                   fillColor: Color.fromARGB(255, 255, 255, 255),
                                   hintStyle: TextStyle(
@@ -99,7 +102,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               child: TextField(
                                 obscureText: true,
                                 decoration: InputDecoration(
-                                  hintText: 'Enter your password:',
+                                  hintText: 'Enter your phoneNumber',
                                   filled: true,
                                   fillColor: Colors.white,
                                   hintStyle: TextStyle(
@@ -128,7 +131,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               child: TextField(
                                 obscureText: true,
                                 decoration: InputDecoration(
-                                  hintText: 'Re-Enter your password',
+                                  hintText: 'Enter your Password',
                                   filled: true,
                                   fillColor: Colors.white,
                                   hintStyle: TextStyle(
@@ -176,5 +179,9 @@ class _SignupScreenState extends State<SignupScreen> {
                     ],
                   ),
                 ))));
+                
   }
+}
+void userDialog(){
+
 }
